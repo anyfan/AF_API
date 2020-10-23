@@ -1,0 +1,10 @@
+# phpstudy环境
+.htaccess
+nginx.htaccess
+
+# 宝塔环境
+.htaccess
+.user.ini
+
+# 不必要的的缓存文件
+.well-know
