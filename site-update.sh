@@ -12,8 +12,10 @@ then
 fi
 #git项目路径（$1是param后面的参数，指向你的服务器的目录）
 gitPath="/www/wwwroot/$1"
+
+
 #git 网址 (替换成你的git地址，可选择https方式或者ssh方式)
-gitHttp="git@github.com:anyfan/site.git"
+# gitHttp="git@github.com:anyfan/site.git"
  
 echo "Web站点路径：$gitPath"
  
