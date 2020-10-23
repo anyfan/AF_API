@@ -15,7 +15,7 @@ use app\Libs\Config;
   <title>Pixiv 每日排行榜 Top<?= Config::$limit ?> 小挂件</title>
 
 
-  <link rel="stylesheet" href="app/views/bootstrap.min.css">
+  <link rel="stylesheet" href="app/Views/bootstrap.min.css">
   <style>
     html,
     body,
@@ -26,9 +26,9 @@ use app\Libs\Config;
       height: 100%;
     }
 
-    body {
-      /* background: #<?= Config::$background_color ?>; */
-    }
+    /* body {
+      background: #<?= Config::$background_color ?>;
+    } */
 
     .item div {
       background-position: center;
@@ -72,8 +72,8 @@ use app\Libs\Config;
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <script src="app/views/jquery.min.js"></script>
-  <script src="app/views/bootstrap.min.js"></script>
+  <script src="app/Views/jquery.min.js"></script>
+  <script src="app/Views/bootstrap.min.js"></script>
 </body>
 
 </html>
