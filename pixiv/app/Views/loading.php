@@ -14,7 +14,7 @@ use app\Libs\Config;
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pixiv 每日排行榜 Top<?= Config::$limit ?> 小挂件</title>
 
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app/views/bootstrap.min.css">
   <style>
     html,
     body {
@@ -71,7 +71,7 @@ use app\Libs\Config;
     <div class="tip">排行榜更新中<br>请稍候</div>
   </div>
 </body>
-<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="app/views//jquery.min.js"></script>
+<script src="app/views//bootstrap.min.js"></script>
 
 </html>

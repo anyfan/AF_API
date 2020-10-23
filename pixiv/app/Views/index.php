@@ -15,7 +15,7 @@ use app\Libs\Config;
   <title>Pixiv 每日排行榜 Top<?= Config::$limit ?> 小挂件</title>
 
 
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app/views/bootstrap.min.css">
   <style>
     html,
     body,
@@ -27,7 +27,7 @@ use app\Libs\Config;
     }
 
     body {
-      background: <?= Config::$background_color ?>;
+      /* background: #<?= Config::$background_color ?>; */
     }
 
     .item div {
@@ -45,15 +45,8 @@ use app\Libs\Config;
       background: none;
     }
   </style>
-  <!-- <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?65a9f8c5bfa2055dbb44f895cb5ea399";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script> -->
+
+
 </head>
 
 <body>
@@ -79,8 +72,8 @@ use app\Libs\Config;
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="app/views/jquery.min.js"></script>
+  <script src="app/views/bootstrap.min.js"></script>
 </body>
 
 </html>
