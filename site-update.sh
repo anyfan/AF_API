@@ -23,9 +23,10 @@ if [ -d "$gitPath" ]; then
         #判断是否存在git目录
         if [ ! -d ".git" ]; then
                 echo "在该目录下克隆 git"
-                git clone $gitHttp gittemp
-                mv gittemp/.git .
-                rm -rf gittemp
+                echo "无.git文件"
+                # git clone $gitHttp gittemp
+                # mv gittemp/.git .
+                # rm -rf gittemp
         fi
         #拉取最新的项目文件
         #git reset --hard origin/master
