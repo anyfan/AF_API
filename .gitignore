@@ -8,3 +8,4 @@ nginx.htaccess
 
 # 不必要的的缓存文件
 .well-know
+ua/log.txt
