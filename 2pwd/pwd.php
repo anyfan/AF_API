@@ -1,6 +1,6 @@
 <?php
 
-class PHPGangsta_GoogleAuthenticator
+class Authenticator
 {
     protected $_codeLength = 6;
 
