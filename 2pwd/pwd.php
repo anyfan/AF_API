@@ -96,6 +96,7 @@ class Authenticator
         $level = !empty($params['level']) && array_search($params['level'], array('L', 'M', 'Q', 'H')) !== false ? $params['level'] : 'M';
 
         $urlencoded = urlencode('otpauth://totp/' . $name . '?secret=' . $secret . '');
+        $title = 'anyfan.top';
         if (isset($title)) {
             $urlencoded .= urlencode('&issuer=' . urlencode($title));
         }
