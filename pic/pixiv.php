@@ -63,4 +63,10 @@ if (file_exists($cache_file)) {
     update_catch($url, $cache_file);
 }
 $data = file_get_contents($cache_file);
-echo(get_no1($data));
+$no1_src = get_no1($data);
+if ($no1_src == '') {
+    // echo ('$no1_src');
+    update_catch($url, $cache_file);
+} else {
+    echo($no1_src);
+}
