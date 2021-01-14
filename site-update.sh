@@ -4,35 +4,32 @@ echo ""
 date --date='0 days ago' "+%Y-%m-%d %H:%M:%S"
 echo "Start"
 #判断宝塔WebHook参数是否存在
-if [ ! -n "$1" ];
-then 
-          echo "param参数错误"
-          echo "End"
-          exit
-fi
+# if [ ! -n "$1" ];
+# then 
+#           echo "param参数错误"
+#           echo "End"
+#           exit
+# fi
 #git项目路径（$1是param后面的参数，指向你的服务器的目录）
-gitPath="/www/wwwroot/$1"
-
-
+gitPath="/www/wwwroot/api.anyfan.top"
 #git 网址 (替换成你的git地址，可选择https方式或者ssh方式)
-# gitHttp="git@github.com:anyfan/site.git"
+gitHttp="git@gitee.com:anyfan/api-af.git"
  
-echo "Web站点路径：$gitPath"
- 
+# echo "Web站点路径：$gitPath"xx
+
 #判断项目路径是否存在
 if [ -d "$gitPath" ]; then
         cd $gitPath
         #判断是否存在git目录
         if [ ! -d ".git" ]; then
                 echo "在该目录下克隆 git"
-                echo "无.git文件"
-                # git clone $gitHttp gittemp
-                # mv gittemp/.git .
-                # rm -rf gittemp
+                git clone $gitHttp gittemp
+                mv gittemp/.git .
+                rm -rf gittemp
         fi
         #拉取最新的项目文件
         #git reset --hard origin/master
-        git pull
+        git pull origin master
         #设置目录权限
         chown -R www:www $gitPath
         echo "End"
