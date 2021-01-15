@@ -5,9 +5,9 @@ class db
     public static function connect_db()
     {
         $servername = "localhost";
-        $username = "test";
+        $username = "api";
         $password = "123456";
-        $dbname = "test";
+        $dbname = "api";
 
         // 创建连接
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -49,7 +49,8 @@ class db
                 $result = mysqli_query($conn, "SELECT * FROM MoeCount WHERE name='$name'");
             }
             $row = mysqli_fetch_array($result);
-            if ($row['day'] != $day) {
+            // if ($row['day'] != $day) {
+            if (false) {
                 // echo '$flag';
                 mysqli_query($conn, "UPDATE MoeCount SET day ='$day' WHERE name = '$name'");
                 mysqli_query($conn, "UPDATE MoeCount SET num ='0' WHERE name = '$name'");
