@@ -49,16 +49,5 @@ class db
             mysqli_query($conn, "UPDATE hitokoto SET str_len=$str_len WHERE id=$i ");
         }
     }
-    function update_h()
-    {
-        $conn = self::connect_db();
-        $sql = "SELECT id FROM hitokoto";
-        $result = mysqli_query($conn, $sql);
-        $num = $result->num_rows;
-        for ($i = 1; $i <= $num; $i++) {
-            $result = mysqli_query($conn, "SELECT hitokoto FROM hitokoto WHERE id=$i");
-            $str_len = strlen(mysqli_fetch_array($result)[0]);
-            mysqli_query($conn, "UPDATE hitokoto SET str_len=$str_len WHERE id=$i ");
-        }
-    }
+
 }

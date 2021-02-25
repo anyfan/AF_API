@@ -6,19 +6,27 @@ $cat = $_GET['cat'];
 $len = (int)$_GET['len'];
 $charset = $_GET['charset'];
 $encode = $_GET['encode'];
+$debug = (int)$_GET['debug'];
 
- 
-if (($cat != 'h')&&($cat != 'd')&&($cat != 'j')&&($cat != 'y')) {
+
+if (($cat != 'h') && ($cat != 'd') && ($cat != 'j') && ($cat != 'y')) {
     $type = 0;
-}else {
+} else {
     $type = $cat;
 }
 $db = new db;
-print_r($db->get($type, $len)['hitokoto']);
+$data = $db->get($type, $len);
 
-
-
-
+if ($debug) {
+    echo json_encode($data);
+} else {
+    // 格式化判断，输出js或纯文本
+    if ($encode === 'js') {
+        echo "function hitokoto(){document.write(\"" . $data['hitokoto'] . "\");}";
+    } else {
+        echo $data['hitokoto'];
+    }
+}
 
 
 //编码判断，用于输出相应的响应头部编码
@@ -31,8 +39,8 @@ print_r($db->get($type, $len)['hitokoto']);
 //     $charset = 'utf-8';
 // }
 
-//格式化判断，输出js或纯文本
-// if ($_GET['encode'] === 'js') {
+// 格式化判断，输出js或纯文本
+// if ($encode === 'js') {
 //     echo "function hitokoto(){document.write('" . $content ."');}";
 // } else {
 //     echo $content;
