@@ -5,9 +5,9 @@ class db
     public static function connect_db()
     {
         $servername = "localhost";
-        $username = "test1";
-        $password = "JGmShXRzLTJT3dJm";
-        $dbname = "test1";
+        $username = "api";
+        $password = "123456";
+        $dbname = "api";
 
         // 创建连接
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -62,4 +62,3 @@ class db
         }
     }
 }
-
